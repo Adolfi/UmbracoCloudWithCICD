@@ -1,5 +1,17 @@
 {
+  "$schema": "../../umbraco-package-schema.json",
   "name": "Custom Translations",
   "version": "1.0.0",
-  "allowPackageTelemetry": true
+  "allowPackageTelemetry": true,
+  "extensions": [
+    {
+      "type": "appEntryPoint",
+      "alias": "CustomTranslations.GreetingOverride",
+      "name": "Greeting Override",
+      "js": "/App_Plugins/CustomTranslations/greeting-override.js"
+    }
+  ],
+  "css": [
+    "/App_Plugins/CustomTranslations/greeting-override.css"
+  ]
 }
