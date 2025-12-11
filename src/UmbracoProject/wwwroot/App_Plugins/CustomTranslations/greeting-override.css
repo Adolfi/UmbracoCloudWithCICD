@@ -1,10 +1,13 @@
 /* Override the Welcome greeting with Välkommen */
 umb-app-auth-modal h1:first-of-type {
-    font-size: 0 !important;
+    text-indent: -9999px !important;
+    line-height: 0 !important;
 }
 
 umb-app-auth-modal h1:first-of-type::after {
     content: "Välkommen";
     font-size: 48px;
     display: block;
+    text-indent: 0;
+    line-height: normal;
 }

@@ -2,22 +2,18 @@
 (function() {
     // Wait for the page to load
     function replaceWelcomeText() {
-        // Find all heading elements with "Welcome" text
-        const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-        headings.forEach(heading => {
-            if (heading.textContent.trim() === 'Welcome') {
+        // Target only the login modal heading to avoid unintended replacements
+        const authModal = document.querySelector('umb-app-auth-modal');
+        if (authModal) {
+            const heading = authModal.querySelector('h1');
+            if (heading && heading.textContent.trim() === 'Welcome') {
                 heading.textContent = 'Välkommen';
             }
-        });
+        }
     }
     
     // Run immediately
     replaceWelcomeText();
-    
-    // Also run after a short delay to catch dynamically loaded content
-    setTimeout(replaceWelcomeText, 100);
-    setTimeout(replaceWelcomeText, 500);
-    setTimeout(replaceWelcomeText, 1000);
     
     // Use MutationObserver to watch for changes
     const observer = new MutationObserver(replaceWelcomeText);
