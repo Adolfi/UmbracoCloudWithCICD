@@ -1,4 +1,4 @@
-name: pipeline # You can add your own name for the pipeline here
+name: Release Pipeline
 
 # Trigger when committing to main branch
 on:
