@@ -417,3 +417,13 @@ healthchecksdb
 
 # Required for Umbraco CI/CD Deployment
 **/git-patch.diff
+src/UmbracoProject.Tests/appsettings-schema.json
+src/UmbracoProject.Tests/umbraco-package-schema.json
+src/UmbracoProject.Tests/appsettings-schema.Umbraco.StorageProviders.json
+src/UmbracoProject.Tests/appsettings-schema.Umbraco.StorageProviders.AzureBlob.json
+.gitignore
+src/UmbracoProject.Tests/appsettings-schema.Umbraco.Forms.json
+.gitignore
+src/UmbracoProject.Tests/appsettings-schema.Umbraco.Cms.json
+src/UmbracoProject.Tests/appsettings-schema.Umbraco.Licenses.json
+src/UmbracoProject.Tests/appsettings-schema.Umbraco.Deploy.json

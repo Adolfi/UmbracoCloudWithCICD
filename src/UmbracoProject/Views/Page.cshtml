@@ -1,7 +1,8 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoProject.Extensions;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = null;
 }
 
-<h1 id="heading">@Model.Value("heading")</h1>
+<h1 id="heading">@Model.Value("heading")?.ToString()?.ReplaceSpecialCharacters()</h1>
